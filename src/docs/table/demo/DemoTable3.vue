@@ -99,11 +99,10 @@ function formatSex(sex: number) {
   }
 }
 
-function set(row: any, column: any) {
+function set(row: any) {
   LewMessage.info(`你可以拿到这一行的数据，例如：id=${row.id}`)
-  console.log(row, column)
 }
-function del(row: any, column: any) {
+function del(_row: any, column: any) {
   LewMessage.warning(`你也可以拿到这一列的数据，例如：field=${column.field}`)
 }
 </script>
@@ -130,7 +129,7 @@ function del(row: any, column: any) {
         <lew-button
           text="管理"
           type="blank"
-          @click="set(row, column)"
+          @click="set(row)"
         />
         <lew-button
           text="删除"

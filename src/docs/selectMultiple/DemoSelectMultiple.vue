@@ -19,7 +19,7 @@ import * as API from './api'
 
 const options = ref(
   Object.keys(API).map((key: any) => {
-    // @ts-expect-error
+    // @ts-expect-error: todofix
     return API[key]
   }),
 )

@@ -1,7 +1,4 @@
 <script lang="ts" setup>
-function clear(e: any) {
-  console.log(e)
-}
 const options = [
   {
     label: '愚不可及',
@@ -105,14 +102,12 @@ const options = [
       :options="options"
       clearable
       placement="left"
-      @clear="clear"
     />
     <lew-input-pro
       style="width: 250px"
       :options="options"
       clearable
       placement="right-start"
-      @clear="clear"
     />
     <lew-input-pro style="width: 250px" :options="options" clearable />
   </lew-flex>

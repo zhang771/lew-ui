@@ -1,17 +1,15 @@
 <script setup lang="ts">
 const value = ref(false)
 
-function mockFn(v: boolean) {
+function mockFn() {
   return new Promise((resolve) => {
     setTimeout(() => {
-      console.log(v)
       resolve(true)
       LewMessage.success('发送成功')
     }, 1000)
   })
 }
-function change(e: boolean) {
-  console.log(e)
+function change() {
 }
 </script>
 

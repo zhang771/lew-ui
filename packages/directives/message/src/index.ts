@@ -117,8 +117,7 @@ function setMessage({ type, e }: MessageOptions) {
     if (e.id)
       messageDom.setAttribute('id', `message-id-${e.id}`)
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
+    // @ts-expect-error: todofix
     LewMessageDom?.appendChild(messageDom, LewMessageDom?.childNodes[0])
   }
   else {

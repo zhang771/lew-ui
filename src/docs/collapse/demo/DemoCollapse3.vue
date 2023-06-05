@@ -3,7 +3,7 @@ const num = ref(987654321.13)
 const num2 = ref(23321)
 function change() {
   num.value += Number(Math.random() * 100000)
-  num2.value += parseInt(String(Math.random() * 100000))
+  num2.value += Number.parseInt(String(Math.random() * 100000))
 
   num.value = Number(num.value.toFixed(2))
 }

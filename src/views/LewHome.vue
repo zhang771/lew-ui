@@ -36,9 +36,6 @@ const options = ref([
     as: 'select',
     rules: Yup.string().required('此项必填'),
     props: {
-      change: (e: any) => {
-        console.log(e)
-      },
       clearable: true,
       options: [
         {
@@ -70,9 +67,6 @@ const options = ref([
     as: 'select-multiple',
     rules: Yup.array().min(1, '至少选择一个').required('此项必填'),
     props: {
-      change: (e: any) => {
-        console.log(e)
-      },
       clearable: true,
       options: schoolsOptions,
     },
@@ -208,8 +202,7 @@ onMounted(() => {
 
     const particleCount = 50 * (timeLeft / duration)
 
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
+    // @ts-expect-error: todofix
     confetti({
       ...defaults,
       particleCount,
@@ -218,8 +211,7 @@ onMounted(() => {
         y: Math.random() - 0.2,
       },
     })
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
+    // @ts-expect-error: todofix
     confetti({
       ...defaults,
       particleCount,
@@ -239,17 +231,9 @@ function submit() {
   lewPopoverRef.value.hide()
 }
 function open(type: any) {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
   LewDialog[type]({
     title: '删除确认',
     content: '删除之后无法恢复，请确定',
-    ok: () => {
-      console.log('确定')
-    },
-    cancel: () => {
-      console.log('取消')
-    },
   })
 }
 
@@ -334,7 +318,6 @@ function message(type: string) {
 }
 
 function notification(type: string) {
-  // @ts-expect-error
   LewNotification[type]({
     title: '提示',
     content: '这是一条demo消息',

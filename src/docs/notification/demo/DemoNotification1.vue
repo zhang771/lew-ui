@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 function open(type: string) {
-  // @ts-expect-error
+  // @ts-expect-error: todofix
   LewNotification[type]({
     title: '通知',
     content: '这是一条重要的通知！！！',

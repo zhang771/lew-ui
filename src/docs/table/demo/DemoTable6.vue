@@ -70,12 +70,6 @@ const columns = [
     x: 'center',
   },
 ]
-function set(row: any, column: any) {
-  console.log(row, column)
-}
-function del(row: any, column: any) {
-  console.log(row, column)
-}
 </script>
 
 <template>
@@ -99,17 +93,15 @@ function del(row: any, column: any) {
           </lew-tag>
         </lew-flex>
       </template>
-      <template #action="{ row, column }">
+      <template #action>
         <lew-flex>
           <lew-button
             text="管理"
             type="blank"
-            @click="set(row, column)"
           />
           <lew-button
             text="删除"
             type="blank"
-            @click="del(row, column)"
           />
         </lew-flex>
       </template>

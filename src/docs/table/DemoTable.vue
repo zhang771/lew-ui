@@ -23,7 +23,7 @@ import * as API from './api'
 
 const options = ref(
   Object.keys(API).map((key: any) => {
-    // @ts-expect-error
+    // @ts-expect-error: todofix
     return API[key]
   }),
 )
@@ -121,7 +121,7 @@ const options = ref(
         ]"
       />
     </LewDemoBox>
-    <LewDemoBox v-if="false" title="固定列" :code="DemoTable7_code">
+    <LewDemoBox style="display: none;" title="固定列" :code="DemoTable7_code">
       <DemoTable7 />
     </LewDemoBox>
     <LewDemoBox title="完整功能" :code="DemoTable8_code">

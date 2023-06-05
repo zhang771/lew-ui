@@ -7,9 +7,6 @@ const options = ref([
 ])
 
 const value = ref('2')
-function change(e: any) {
-  console.log(e)
-}
 </script>
 
 <template>
@@ -17,6 +14,5 @@ function change(e: any) {
     v-model="value"
     direction="y"
     :options="options"
-    @change="change"
   />
 </template>

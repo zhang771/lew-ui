@@ -1,7 +1,5 @@
 <script setup lang="ts">
 function open(type: any, layout: string) {
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
   LewDialog[type]({
     title: '删除确认',
     content: '你是否要删除该账号',

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 function openWithDelay(type: string) {
-  // @ts-expect-error
+  // @ts-expect-error: todofix
   LewNotification[type]({
     title: '通知',
     content: '我会自己消失哦',
@@ -8,7 +8,7 @@ function openWithDelay(type: string) {
   })
 }
 function openWithoutDelay(type: string) {
-  // @ts-expect-error
+  // @ts-expect-error: todofix
   LewNotification[type]({
     title: '通知',
     content: '没有得到你的允许之前我是不会消失的！',

@@ -98,13 +98,6 @@ function formatSex(sex: number) {
       return '未知'
   }
 }
-
-function set(row: any, column: any) {
-  console.log(row, column)
-}
-function del(row: any, column: any) {
-  console.log(row, column)
-}
 </script>
 
 <template>
@@ -135,17 +128,15 @@ function del(row: any, column: any) {
     <template #intro="{ row }">
       {{ row.intro }}
     </template>
-    <template #action="{ row, column }">
+    <template #action>
       <lew-flex>
         <lew-button
           text="管理"
           type="blank"
-          @click="set(row, column)"
         />
         <lew-button
           text="删除"
           type="blank"
-          @click="del(row, column)"
         />
       </lew-flex>
     </template>

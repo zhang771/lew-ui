@@ -1,9 +1,6 @@
 <script lang="ts" setup>
 const pageNum = ref(2)
 const pageSize = ref(20)
-function change(e: any) {
-  console.log(e)
-}
 const total = ref(24)
 
 // 模拟请求
@@ -32,7 +29,6 @@ setTimeout(() => {
         },
       ]"
       :total="total"
-      @change="change"
     >
       <template #right>
         <div style="margin-left: 20px">

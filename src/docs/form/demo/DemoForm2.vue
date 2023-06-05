@@ -74,9 +74,6 @@ const options = ref([
     as: 'select',
     rules: Yup.string().required('此项必填'),
     props: {
-      change: (e: any) => {
-        console.log(e)
-      },
       clearable: true,
       options: [
         {
@@ -115,18 +112,11 @@ const options = ref([
     as: 'button',
     props: {
       text: '提交',
-      click: () => submit(),
     },
   },
 ])
 
 const formRef = ref()
-
-function submit() {
-  formRef.value.validate().then((res: any) => {
-    console.log(res)
-  })
-}
 </script>
 
 <template>

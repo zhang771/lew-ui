@@ -60,8 +60,7 @@ function dialog(type: string, options: Options) {
                           return true
                         }),
           onClose: () => {
-            // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-            // @ts-expect-error
+            // @ts-expect-error: todofix
             app.unmount(div)
             div.remove()
           },

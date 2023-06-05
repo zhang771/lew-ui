@@ -1,4 +1,6 @@
 <script setup lang="ts">
+const navMenus = ref([] as any)
+
 function initNav() {
   const titleDoms = document.getElementsByClassName('demo-docs-title')
   navMenus.value = Array.from(titleDoms).map((e: any) => {
@@ -9,19 +11,15 @@ function initNav() {
   })
 }
 
-const navMenus = ref([] as any)
-
 function init() {
   // 选取需要监听的DOM元素
   const targetNode: any = document.getElementById('component-main')
 
   // 实例化MutationObserver对象，传入回调函数
-  const observer = new MutationObserver((mutationsList, observer) => {
+  const observer = new MutationObserver((mutationsList) => {
     for (const mutation of mutationsList) {
-      if (mutation.type === 'childList') {
-        console.log('节点发生变化，添加或删除了子节点')
+      if (mutation.type === 'childList')
         initNav()
-      }
     }
   })
 

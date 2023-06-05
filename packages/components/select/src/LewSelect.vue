@@ -248,21 +248,21 @@ defineExpose({ show, hide })
             }"
             :height="getVirtualHeight"
           >
-            <template #default="props">
+            <template #default="useVirtualList">
               <!-- you can get current item of list here -->
-              <label @click="selectHandle(props.data)">
+              <label @click="selectHandle(useVirtualList.data)">
                 <div
                   v-if="!labelSlot"
                   class="lew-select-item"
-                  :class="getSelectItemClassName(props.data)"
+                  :class="getSelectItemClassName(useVirtualList.data)"
                   :style="{ height: `${itemHeight}px` }"
                 >
                   <div class="lew-select-label">
-                    {{ props.data.label }}
+                    {{ useVirtualList.data.label }}
                   </div>
                   <lew-icon
                     v-if="
-                      getChecked(props.data.value)
+                      getChecked(useVirtualList.data.value)
                         && showCheckIcon
                     "
                     class="icon-check"
@@ -277,8 +277,8 @@ defineExpose({ show, hide })
                 >
                   <slot
                     name="label"
-                    :item="props.data"
-                    :checked="getChecked(props.data.value)"
+                    :item="useVirtualList.data"
+                    :checked="getChecked(useVirtualList.data.value)"
                   />
                 </div>
               </label>

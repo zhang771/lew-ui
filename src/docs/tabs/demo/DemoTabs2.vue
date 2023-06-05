@@ -21,7 +21,6 @@ const value = ref('')
 const value2 = ref('')
 
 function change(e: Options) {
-  console.log(e)
   LewMessage.info(e.label)
 }
 </script>

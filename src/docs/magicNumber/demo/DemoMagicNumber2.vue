@@ -10,7 +10,7 @@ onMounted(() => {
     num.value = Number(num.value.toFixed(2))
   }, 1500)
   timer2 = setInterval(() => {
-    num2.value += parseInt(String(Math.random() * 500))
+    num2.value += Number.parseInt(String(Math.random() * 500))
   }, 1500)
 })
 

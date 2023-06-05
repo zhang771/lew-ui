@@ -103,6 +103,7 @@ const columns = [
 
 onMounted(() => {
   document.onkeydown = function (event) {
+    // eslint-disable-next-line no-caller
     const e = event || window.event || arguments.callee.caller.arguments[0]
     if (e && e.keyCode === 27) {
       // 按 Esc
